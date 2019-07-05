@@ -1,0 +1,36 @@
+Waiting to connect to bluetoothd...[0;94m[bluetooth][0m# [K[[0;92mNEW[0m] Controller B8:27:EB:56:E9:ED BlueZ 5.44 [default]
+[0;94m[bluetooth][0m# [K[[0;92mNEW[0m] Device 07:79:CB:57:DF:3B 07-79-CB-57-DF-3B
+[0;94m[bluetooth][0m# [K[[0;92mNEW[0m] Device 24:71:89:E9:09:81 PSSENSBANKB
+[0;94m[bluetooth][0m# [[0;92mNEW[0m] Device 07:B4:8A:A2:37:96 07-B4-8A-A2-37-96
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 2E:DC:0D:4D:BA:3C 2E-DC-0D-4D-BA-3C
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 01:C7:FA:92:96:3C 01-C7-FA-92-96-3C
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 98:07:2D:3E:38:86 CC2650 SensorTag
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 2F:5C:37:43:DE:D1 2F-5C-37-43-DE-D1
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 26:34:D4:EA:D3:DF 26-34-D4-EA-D3-DF
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 0F:3F:9A:A1:F2:79 0F-3F-9A-A1-F2-79
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 2A:03:47:45:D4:EC 2A-03-47-45-D4-EC
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 30:B5:F2:C8:14:68 30-B5-F2-C8-14-68
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device B0:B4:48:BD:DA:85 CC2650 SensorTag
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:C0:31:06 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device A0:E6:F8:AE:37:86 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device B0:B4:48:ED:DE:04 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:CC:C0:84 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device A0:E6:F8:B6:50:84 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device B0:B4:48:CD:5B:06 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:E8:F4:00 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:E8:30:83 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 35:8D:CD:1C:3A:C1 35-8D-CD-1C-3A-C1
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:BC:0E:84 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:E3:72:06 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device 24:71:89:CC:F9:03 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# [K[[0;92mNEW[0m] Device A0:E6:F8:AE:2C:02 PSSENSBANKB
+[0;94m[PSSENSBANKB][0m# scan onscan off
+Invalid argument onscan off
+[0;94m[PSSENSBANKB][0m# 
+[0;94m[PSSENSBANKB][0m# 
+[0;94m[PSSENSBANKB][0m# 
+[0;94m[PSSENSBANKB][0m# 
+[0;94m[PSSENSBANKB][0m# scan onscan off[K
+[0;94m[PSSENSBANKB][0m# 
+[0;94m[PSSENSBANKB][0m# quit
+[0;94m[PSSENSBANKB][0m# 
