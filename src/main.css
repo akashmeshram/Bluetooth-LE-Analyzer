@@ -1,0 +1,136 @@
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url('./Montserrat-Regular.ttf'); 
+}
+
+@font-face {
+	font-family: Montserrat-Medium;
+	src: url('./Montserrat-Medium.ttf'); 
+}
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+}
+
+table {
+	width: 1300px;
+	background-color: #fff;
+
+	border-radius: 8px;
+	overflow: hidden;
+	background: #7918f2;
+	background: -webkit-linear-gradient(-68deg, #ac32e4 ,  #4801ff;);
+	background: -o-linear-gradient(-68deg, #ac32e4 , #4801ff);
+	background: -moz-linear-gradient(-68deg, #ac32e4 , #4801ff);
+	background: linear-gradient(-68deg, #ac32e4 , #4801ff);
+}
+
+th, td {
+	font-weight: unset;
+	padding-right: 10px;
+	width: 130px;
+	padding-left: 25px;
+}
+
+div {
+	width: 100%;
+	min-height: 100vh;
+	background: #d1d1d1;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 33px 30px;
+	flex-direction: column;
+
+}
+
+th {
+	padding-top: 24px;
+	padding-bottom: 20px;
+}
+
+td {
+	padding-top: 18px;
+	padding-bottom: 14px;
+	text-align: center;
+}
+
+td {
+	font-family: Montserrat-Regular;
+	font-size: 14px;
+	color: #fff;
+	line-height: 1.4;
+}
+
+th {
+	font-family: Montserrat-Medium;
+	font-size: 16px;
+	color: #fff;
+	line-height: 1.4;
+	text-transform: uppercase;
+
+	background-color: rgba(255,255,255,0.32);
+}
+
+tr:hover td {
+	background-color: rgba(255,255,255,0.1);
+}
+
+tr td:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+th button {
+	font: inherit;	
+	color: #fff;
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+th button:hover {
+	color: #000;
+	cursor: pointer;
+}
+
+#sensorsRefresh {
+	font-family: Montserrat-Regular;
+	font: inherit;
+	font-size: 22px;
+	padding-right: 25px;
+	width: 130px;
+	padding-left: 25px;
+	padding-top: 24px;
+	padding-bottom: 20px;
+	margin: 30px 0;
+
+	border-radius: 50px;
+    border: 3px solid #ac32e4;
+    color: #ac32e4;
+    overflow: hidden;
+    background: transparent;
+}
+
+#sensorsRefresh:hover {
+	cursor: pointer;
+	background: rgba(255,255,255,0.5); 
+}
+
+#sensorsRefresh:focus {
+	outline: none;
+}
