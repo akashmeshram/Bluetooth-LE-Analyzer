@@ -27,7 +27,7 @@ npm install
 
 This will install all dependencies as defined in the **package.json** file.
 
-## ✍️ Author <a name = "authors"></a>
+## Author <a name = "authors"></a>
 - [Akash Meshram](https://github.com/akashmeshram) - Idea & main work
 
 ## License
