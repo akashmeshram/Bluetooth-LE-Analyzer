@@ -2,11 +2,17 @@
 
 ## Table of Contents
 - [About](#about)
+- [Demo](#Demo)
 - [Prerequisites](#Prerequisites)
 - [Getting Started](#getting_started)
 - [Author](#authors)
 
 ## About <a name = "about"></a>
+Bluetooth low energy wireless technology an emerging specification and will change how the wireless world connects. Consuming only a fraction of the power of Basic Rate/Enhanced Data Rate Bluetooth wireless technology, it will allow hundreds of millions of new wireless devices to interoperate within the Bluetooth ecosystem. From watches, sports and fitness devices, to wellness, healthcare, and more, this new technology is expected to greatly accelerate the wireless evolution.
+
+This Bluetooth low energy analyzer helps you pinpoint different bluetooth devices at a glance along with reading their status and characteristics with the hosted device.
+
+## Demo <a name = "Demo"></a>
 <p align="center">
   <img width="700" align="center" src="./Annotation.png" alt="demo"/>
 </p>
