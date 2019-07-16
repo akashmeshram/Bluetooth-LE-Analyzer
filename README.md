@@ -31,7 +31,11 @@ Navigate into folder containing project using your Terminal (Mac & Linux) or Com
 npm install
 ```
 
-This will install all dependencies as defined in the **package.json** file.
+This will install all dependencies as defined in the **package.json** file. 
+Then run the project
+```
+node analyzer.js
+```
 
 ## Author <a name = "authors"></a>
 - [Akash Meshram](https://github.com/akashmeshram) - Idea & main work
