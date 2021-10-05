@@ -4,6 +4,7 @@
   "description": "network-analyzer",
   "main": "analyzer.js",
   "scripts": {
+    "run": "node analyzer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

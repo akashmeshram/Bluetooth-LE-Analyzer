@@ -1,44 +1,42 @@
-var bodyParser = require('body-parser')
 const util = require('util')
 const express = require('express')
 const app = express()
-app.use(express.static('public'))
+const exec = require('child_process').execSync;
 
-app.use(bodyParser.json());
-var exec = require('child_process').execSync;
+app.use(express.static('public'));
 
-
-app.get('/info', function(req, res) {
-
-
-});
-
-
-app.listen(8080, function() {
+app.listen(2345, function() {
     console.log('App listening on port 8080!')
 })
 
-function now() {
+app.get('/info', function(req, res) {
+    try {
+        const data = 'Connected to Main Hub 🎊';
+        res.status(200).json(data);
+    } catch (err) {
+        throw new Error(err);
+    }
+});
+
+const now = () => {
     return parseInt(new Date().getTime() / 1000)
 }
 
-var blDev = {};
+var blDev = [];
 
 app.get('/sensors', function(req, res) {
 
-    for (var l in blDev) {
-        blDev[l]['status'] = 'Discoverable'
-    }
+    blDev.map((_, id) => blDev[id]['status'] = 'Discoverable');
 
-    console.log("initSensors triggered");
-    var _ = {}
-    var __ = [
+    console.log("initSensors triggered 🔥");
+    let _ = {}
+    let __ = [
         ["BL", 'sudo ./bluetooth.sh'],
         ["BLdevices", 'sudo ./devices.sh']
     ]
 
-    var regex = /[0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}/g;
-    var connectedDev;
+    const regex = /[0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}[:][0-9a-fA-F]{2}/g;
+    let connectedDev;
     try {
         connectedDev = exec(util.format("sudo hcitool con")).toString().trim();
         connectedDev = connectedDev.match(regex);
@@ -47,62 +45,50 @@ app.get('/sensors', function(req, res) {
         connectedDev = []
     }
 
-    for (var i = 0; i < __.length; i++) {
-
-        try { _[__[i][0]] = exec(__[i][1]).toString().trim() } catch (e) {
-
-            _[__[i][0]] = ""
+    __.map(cmd => {
+        try {
+            _ = {..._, [cmd[0]] : exec(__[i][1]).toString().trim() || ''};
+        } catch (err) {
+            throw new Error(err);
         }
-    }
+    })
 
-    var totalDev = _["BL"].split('\r\n');
-    for (var l of totalDev) {
-        var mac = l.substr(0, l.indexOf(' '));
-        var late = l.substr(l.indexOf(' ') + 1);
+    const totalDev = _["BL"].split('\r\n');
+    totalDev.map(dev => {
+        const mac = dev.substr(0, dev.indexOf(' '));
+        const late = dev.substr(l.indexOf(' ') + 1);
         if (blDev[mac] == null) {
-            blDev[mac] = {
-                name: late,
-                rssi: '',
-                status: 'Discoverable'
-            }
+            blDev[mac] = { name: late, rssi: '', status: 'Discoverable'}
         } else if (l.split(" ")[1] == 'RSSI:') {
-            blDev[mac]['rssi'] = l.split(" ")[2];
+            blDev[mac]['rssi'] = dev.split(" ")[2];
         } else if (mac == blDev[mac]) {
             blDev[mac]['name'] = late;
         }
-    }
-    if (connectedDev != null && connectedDev.length > 0) {
-        for (var Dev of connectedDev) {
-            if (blDev[Dev] == null) {
-                var newDev = "\r\n" + Dev + " " + Dev
-                blDev[Dev] = {
-                    name: Dev,
-                    rssi: '',
-                    status: 'Connected'
-                }
+    })
+
+    if (connectedDev && connectedDev.length > 0) {
+        connectedDev.map(Dev => {
+            if (blDev[Dev]) {
+                const newDev = `\r\n${Dev} ${Dev}`;
+                blDev[Dev] = { name: Dev, rssi: '', status: 'Connected' }
                 _["BLdevices"] = _["BLdevices"] + newDev;
             } else {
-                var data = _.BLdevices.split("\r\n");
-                var exist = false;
-                for (var line of data) {
+                const data = _.BLdevices.split("\r\n");
+                let exist = false;
+                data.map(line => {
                     line = line.split(" ");
-                    if (line[0] == Dev) {
-                        exist = true;
-                        break;
-                    }
-                }
+                    if (line[0] == Dev) exist = true;
+                })
                 if (!exist) {
-                    var newDev = "\r\n" + Dev + " " + blDev[Dev]['name']
-                    _["BLdevices"] = _["BLdevices"] + newDev;
+                    const newDev = `\r\n${Dev} ${blDev[Dev]['name']}`; 
+                    _["BLdevices"] += newDev;
                 }
             }
-
             blDev[Dev]['status'] = 'Connected'
-        }
+        })
     }
 
     _["BL"] = blDev;
-
-    _.ts = now()
+    _.ts = now();
     res.json({ success: true, _: _ })
 });
